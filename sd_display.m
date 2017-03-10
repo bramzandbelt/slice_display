@@ -131,7 +131,13 @@ for i_slice = 1:settings.fig_specs.n.slice
                                layers(i_layer).color.hold);
             
         else
-            Y_m = ones(size(Y_c));
+            switch lower(layers(i_layer).type)
+                case 'cluster'
+                    Y_m = ones(size(Y_c));
+                    Y_m(Y_c == 0) = 0;
+                otherwise
+                    Y_m = ones(size(Y_c));
+            end
         end
         
         % Display layer
@@ -216,10 +222,13 @@ for i_colorbar = 1:settings.fig_specs.n.colorbar
     
     i_layer = settings.fig_specs.i.colorbar(i_colorbar);
     
-    p(2,i_colorbar).select();
+    [i_row,i_col] = ind2sub([settings.fig_specs.n.colorbar_row, ...
+                             settings.fig_specs.n.colorbar_column], ...
+                             i_colorbar);
+    p(2,i_row,i_col).select();
     
     switch lower(layers(i_layer).type)
-        case 'blob'
+        case {'blob','cluster'}
             
             % Transform vectors coding for color and opacity into 2D matrix
             color_vector = linspace(layers(i_layer).color.range(1), ...
@@ -233,15 +242,22 @@ for i_colorbar = 1:settings.fig_specs.n.colorbar
             
             % Plot the colorbar
             imagesc(color_vector,alpha_vector,color_mat);
-            colormap(layers(i_layer).color.map); 
+            colormap(gca, layers(i_layer).color.map);
             axis tight
             
             h_xlabel = xlabel(layers(i_layer).color.label);
             set(h_xlabel,'interpreter','tex')
-            set(gca, 'Box', 'off', ...
-                     'XLim',layers(i_layer).color.range, ...
-                     'YTick',[]);
-
+            
+            if numel(unique(layers(i_layer).color.range)) == 1
+                set(gca, 'Box', 'off', ...
+                         'XTick',[], ...
+                         'YTick',[]);
+            else
+                set(gca, 'Box', 'off', ...
+                         'XLim',layers(i_layer).color.range, ...
+                         'YTick',[]);
+            end
+            
         case 'dual'
             
             % Transform vectors coding for color and opacity into 2D matrix
@@ -257,7 +273,7 @@ for i_colorbar = 1:settings.fig_specs.n.colorbar
             
             % Plot the colorbar
             imagesc(color_vector,alpha_vector,color_mat);
-            colormap(layers(i_layer).color.map); 
+            colormap(gca, layers(i_layer).color.map);
             alpha(alpha_mat);
             alpha('scaled');  
             axis tight
