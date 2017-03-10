@@ -121,7 +121,7 @@ switch lower(todo)
         end
         
         if isempty(settings.fig_specs.margin.colorbar)
-            settings.fig_specs.margin.colorbar = [0 0 0 0];
+            settings.fig_specs.margin.colorbar = [5 5 2 2];
         end
         
         % settings.fig_specs.width
