@@ -186,20 +186,7 @@ if n.colorbar >= 1
         end
     end
 
-    
-    norm_width  = 1/n.colorbar_column;
-    norm_height = 1/n.colorbar_row;
-    
-    for i_row = 1:n.colorbar_row
-        for i_col = 1:n.colorbar_column
-            
-            norm_left = i_col/n.colorbar_column - norm_width;
-            norm_bottom = (n.colorbar_row - i_row)/n.colorbar_row;
-            
-            p(2).pack({[norm_left, norm_bottom, norm_width, norm_height]});
-            
-        end
-    end
+    p(2).pack(n.colorbar_row,n.colorbar_column)
     
     p.margin = m.figure;
     p.de.margin = m.panel;
