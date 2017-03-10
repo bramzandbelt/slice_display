@@ -1,0 +1,17 @@
+# File types to ignore
+
+## Tabular data
+*.csv
+
+## MRI data
+*.nii
+*.img
+*.hdr
+
+## MATLAB data files
+*.mat
+
+## Documents
+*.pdf
+*.docx
+*.eps
