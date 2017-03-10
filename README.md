@@ -33,7 +33,7 @@ See the example scripts in the directory 'examples'.
 
 ### Citation
 If you intend to publish figures obtained with this code, cite it as follows:
-- Zandbelt, Bram (2017): Slice Display. figshare. http://dx.doi.org/10.6084/m9.figshare.971318
+- Zandbelt, Bram (2017): Slice Display. figshare. 10.6084/m9.figshare.4742866.
 
 If you intend to publish figures using dual-coded design, also cite the following paper:
 - Allen, E. A., Erhardt, E. B., & Calhoun, V. D. (2012). Data Visualization in the Neurosciences: Overcoming the Curse of Dimensionality. Neuron, 74(4), 603–608. https://doi.org/10.1016/j.neuron.2012.05.001
