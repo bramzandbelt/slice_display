@@ -2,7 +2,18 @@
 
 ## Overview
 
-Slice Display is a MATLAB toolbox for visualizing fMRI data, including dual-coded images (simultaneous display of contrast estimate and unthreshold t-statistic maps).
+Slice Display is a MATLAB toolbox for visualizing fMRI data, including dual-coded images (simultaneous display of contrast estimate and unthreshold t-statistic maps). Data visualizations can be entirely scripted, so that it is easy to reproduce figures.
+
+_Typical visualization of fMRI data - thresholded t-map_
+![](./example_thresholded_t_map.jpg)
+
+_Alternative visualization of fMRI data - dual-coded map_
+
+- Simultaneous display of effect size (color-coded) and unthresholded inferential statistics (opacity-coded)
+- Contours distinguish statistically significant and non-significant voxels
+- Show more and hide less, while allowing for spatial localization
+
+![](./example_dual_coded_map.jpg)
 
 ## Getting started
 
@@ -31,11 +42,18 @@ git clone https://github.com/bramzandbelt/slice_display.git
 
 See the example scripts in the directory 'examples'.
 
+### Papers & preprints using Slice Display
+
+- [van Lieshout, L. L., Vandenbroucke, A. R., Müller, N. C., Cools, R., & de Lange, F. P. (2018). Induction and relief of curiosity elicit parietal and frontal activity. Journal of Neuroscience, 38(10), 2579-2588.](https://doi.org/10.1523/JNEUROSCI.2816-17.2018)
+- [Richter, D., Ekman, M., & de Lange, F. P. (2017). Suppressed sensory response to predictable object stimuli throughout the ventral visual stream. bioRxiv, 228890.](https://www.biorxiv.org/content/early/2017/12/04/228890)
+
 ### Citation
 If you intend to publish figures obtained with this code, cite it as follows:
+
 - Zandbelt, Bram (2017): Slice Display. figshare. 10.6084/m9.figshare.4742866.
 
 If you intend to publish figures using dual-coded design, also cite the following paper:
+
 - Allen, E. A., Erhardt, E. B., & Calhoun, V. D. (2012). Data Visualization in the Neurosciences: Overcoming the Curse of Dimensionality. Neuron, 74(4), 603–608. https://doi.org/10.1016/j.neuron.2012.05.001
 
 ## Colophon
