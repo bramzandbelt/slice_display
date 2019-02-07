@@ -2,7 +2,7 @@
 
 ## Overview
 
-Slice Display is a MATLAB toolbox for visualizing fMRI data, including dual-coded images (simultaneous display of contrast estimate and unthreshold t-statistic maps). Data visualizations can be entirely scripted, so that it is easy to reproduce figures.
+Slice Display is a MATLAB toolbox for visualizing fMRI data. Besides standard fMRI displays, it can make dual-coded images (simultaneous display of contrast estimate and unthreshold t-statistic maps). Data visualizations can be entirely scripted, so that generating figures is easy and reproducible.
 
 _Typical visualization of fMRI data - thresholded t-map_
 ![](./example_thresholded_t_map.jpg)
