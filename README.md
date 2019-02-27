@@ -45,7 +45,8 @@ See the example scripts in the directory 'examples'.
 ### Papers & preprints using Slice Display
 
 - [van Lieshout, L. L., Vandenbroucke, A. R., Müller, N. C., Cools, R., & de Lange, F. P. (2018). Induction and relief of curiosity elicit parietal and frontal activity. Journal of Neuroscience, 38(10), 2579-2588.](https://doi.org/10.1523/JNEUROSCI.2816-17.2018)
-- [Richter, D., Ekman, M., & de Lange, F. P. (2017). Suppressed sensory response to predictable object stimuli throughout the ventral visual stream. bioRxiv, 228890.](https://www.biorxiv.org/content/early/2017/12/04/228890)
+- [Richter, D., Ekman, M., & de Lange, F. P. (2018). Suppressed sensory response to predictable object stimuli throughout the ventral visual stream. Journal of Neuroscience, 38(34), 7452-7461.](https://doi.org/10.1523/JNEUROSCI.3421-17.2018)
+- [Ai, H., Xin, Y., Luo, Y., Gu, R., & Xu, P. (2019). Volume of motor area predicts motor impulsivity. European Journal of Neuroscience.](https://doi.org/10.1111/ejn.14339)
 
 ### Citation
 If you intend to publish figures obtained with this code, cite it as follows:
