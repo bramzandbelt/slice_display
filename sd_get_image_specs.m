@@ -68,7 +68,7 @@ Z               = 3;
 dims            = slice_dims;
 xmm             = dims(X,1):dims(X,2):dims(X,3);
 ymm             = dims(Y,1):dims(Y,2):dims(Y,3);
-zmm             = slices(ismember(slices,settings.slice.disp_slices));
+zmm             = slices(ismembertol(slices,settings.slice.disp_slices));
 [y, x]          = meshgrid(ymm,xmm');
 
 % Voxel and panel dimensions
