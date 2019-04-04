@@ -19,12 +19,12 @@ _Alternative visualization of fMRI data - dual-coded map_
 
 ### Requirements
 
-* [MATLAB](http://www.mathworks.com)
+* [MATLAB R2015a or later](http://www.mathworks.com)
 * [MATLAB Statistics Toolbox](http://www.mathworks.com/products/statistics/)
 * [SPM](http://www.fil.ion.ucl.ac.uk/spm/) by the Wellcome Trust Centre for Neuroimaging at UCL
 * [Panel](https://www.mathworks.com/matlabcentral/fileexchange/20003-panel) by Ben Mitch
 
-### Intstallation
+### Installation
 
 You can either download the code as a ZIP file or you can clone the code:
 
