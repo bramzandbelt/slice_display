@@ -1,4 +1,4 @@
-function [settings, p] = sd_display(layers, settings)
+function [settings, p, h_figure] = sd_display(layers, settings)
 % SD_DISPLAY Displays one or more layers of a series of NIfTI image slices
 % 
 % DESCRIPTION
@@ -13,6 +13,7 @@ function [settings, p] = sd_display(layers, settings)
 %                 (for details, type 'help sd_config_settings')
 %
 % p             - panel object (for details, type 'help panel')
+% h_figure      - figure handle
 %
 % EXAMPLES
 % Display the single subject T1-weighted scan in SPM's canonical directory
