@@ -70,6 +70,12 @@ xmm             = dims(X,1):dims(X,2):dims(X,3);
 ymm             = dims(Y,1):dims(Y,2):dims(Y,3);
 zmm             = slices(ismembertol(slices,settings.slice.disp_slices));
 [y, x]          = meshgrid(ymm,xmm');
+if isempty(zmm)
+    error(['Could not find any match to the requested slices.\n', ...
+           '\nRequested slices are:\n', repmat('%f, ', 1, numel(settings.slice.disp_slices)), ...
+           '\n\nPossible slices values are:\n', repmat('%f, ', 1, numel(slices))], ...
+               settings.slice.disp_slices, slices)
+end
 
 % Voxel and panel dimensions
 vdims           = [length(xmm),length(ymm),length(zmm)];
