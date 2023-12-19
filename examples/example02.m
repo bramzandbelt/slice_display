@@ -35,11 +35,20 @@ layers(2).opacity.range             = [0 5.77];
 % Layer 3: Contour of significantly activated voxels
 layers(3).color.file                = fullfile(data_dir,'F_vs_B_significant_voxels_FWE_voxel_level.nii');
 
-% Specify settings
+% Countour color and width settings
+layers(3).color.map                 = []; % empty for default black [0 0 0], [1 1 1] for white
+layers(3).color.line_width          = 1;  % default is 1
+
+% Step 3: Specify other settings
+% ------------------------------------------------------------------------------
 settings.slice.orientation          = 'axial';
 settings.slice.disp_slices          = -30:10:60;
 settings.fig_specs.n.slice_column   = 5;
 settings.fig_specs.title            = 'faces - baseline';
 
-% Display the layers
+% Set background color to white instead of default black
+settings.bgWhite = true;
+
+% Step 4: Display
+% ------------------------------------------------------------------------------
 [settings,p] = sd_display(layers,settings);

@@ -37,6 +37,9 @@ settings.slice.disp_slices          = -30:10:60;
 settings.fig_specs.n.slice_column   = 5;
 settings.fig_specs.title            = 'faces - baseline';
 
+% Set background color to white instead of default black
+settings.bgWhite = true;
+
 % Step 4: Display
 % ------------------------------------------------------------------------------
 sd_display(layers,settings);
