@@ -21,12 +21,24 @@ function Y_rgb = sd_slice_to_rgb(Y, layer, settings)
 % Panel dimenstions
 pandims             = settings.slice.pandims;
 
+% If background color should be white, adapt "mn" and "lrn" inputs to
+% pr_scaletocmap function
+if strcmp(layer.type,'truecolor') && isfield(settings,'bgWhite') && settings.bgWhite
+    mn = 0.02*layer.color.range(2);  % sets min to 2% of max
+    mx = layer.color.range(2);
+    lrn = [256 256 256];
+else
+    mn = layer.color.range(1);
+    mx = layer.color.range(2);
+    lrn = [0 256 0];
+end
+
 % Use slover to scale slice to color map indices
 Y_map_i             = pr_scaletocmap(Y, ...
-                                     layer.color.range(1), ...
-                                     layer.color.range(2), ...
+                                     mn, ...
+                                     mx, ...
                                      layer.color.map, ...
-                                     [0 256 0]);
+                                     lrn);
 
 % Convert to RGB
 Y_rgb                       = reshape(layer.color.map(Y_map_i(:),:),....
